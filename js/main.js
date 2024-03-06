@@ -11,7 +11,7 @@ const $ownStories = $("#myStories");
 const $storiesContainer = $("#stories-container");
 
 // This will find all instances of the class stories-list. Currently 3.
-const $storiesLists = $(".stories -list");
+const $storiesLists = $(".stories-list");
 
 const $loginForm = $("#login-form");
 const $signupForm = $("#signup-form");
@@ -31,9 +31,9 @@ const $userProfile = $("#user-profile");
 function hidePageComponents() {
   const components = [
     $storiesLists,
+    $submitForm,
     $loginForm,
     $signupForm,
-    $submitForm,
     $userProfile,
   ];
   components.forEach(c => c.hide());

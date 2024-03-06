@@ -119,7 +119,7 @@ function putUserStoriesOnPage() {
   $ownStories.empty();
 
   if (currentUser.ownStories.length === 0) {
-    $ownStories.append("<h5>No storie added by user yet!</h5>");
+    $ownStories.append("<h5>No stories added by user yet!</h5>");
   } else {
     // Loop through all user stories and generate HTML
     for (let story of currentUser.ownStories) {
@@ -165,7 +165,7 @@ async function toggleStoryFavorite(evt) {
   const $target = $(evt.target);
   const $closestLi = $target.closest("li");
   const storyId = $closestLi.attr("id");
-  const story = storyList.stories.find((s) => s.storyId === storyId);
+  const story = storyList.stories.find(s => s.storyId === storyId);
 
   // See if story is already a fav
   if ($target.hasClass("fas")) {
