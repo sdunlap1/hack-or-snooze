@@ -55,7 +55,7 @@ $navLogin.on("click", navLoginClick);
 function navProfileClicked(evt) {
   console.debug("navProfileClicked", evt);
   hidePageComponents();
-  $navUserProfile.show();
+  $userProfile.show();
 }
 $navUserProfile.on("click", navProfileClicked);
 
