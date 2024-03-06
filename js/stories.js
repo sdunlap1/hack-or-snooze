@@ -76,7 +76,7 @@ async function deleteStory(evt) {
   console.debug("deleteStory");
 
   const $closestLi = $(evt.target).closest("li");
-  const storyId = $closestLi.att("id");
+  const storyId = $closestLi.attr("id");
 
   await storyList.removeStory(currentUser, storyId);
 

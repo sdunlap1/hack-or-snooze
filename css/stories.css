@@ -15,10 +15,17 @@
   font-size: 150%;
   margin: 20px 30px;
 }
+#myStories,
+#favorited-stories {
+  list-style: none;
+}
 
 
 /* Individual stories */
-
+.star,
+.trash-can {
+  cursor: pointer;
+}
 .story-link {
   color: black;
   font-size: 0.85rem;
@@ -36,4 +43,7 @@
 
 .story-user {
   display: block;
+}
+.trash-can:hover {
+  color: red;
 }
