@@ -1,6 +1,6 @@
 "use strict";
 
-// So we don't have to keep re-finding things on page, find DOM elements once:
+// Global DOM element selectors for caching and easy access throughout the app.
 
 const $body = $("body");
 
@@ -23,10 +23,10 @@ const $navUserProfile = $("#nav-user-profile");
 const $navLogOut = $("#nav-logout");
 const $userProfile = $("#user-profile");
 
-/** To make it easier for individual components to show just themselves, this
- * is a useful function that hides pretty much everything on the page. After
- * calling this, individual components can re-show just what they want.
- */
+/** 
+ *  Use hidePageComponents to show a specific view when needed. 
+ *  For example, when clicking on Favorites and My Stories links.
+ **/
 
 function hidePageComponents() {
   const components = [
@@ -44,11 +44,11 @@ function hidePageComponents() {
 async function start() {
   console.debug("start");
 
-  // "Remember logged-in user" and log in, if credentials in localStorage
+  // "Remember logged-in user" and log in, if credentials are in localStorage
   await checkForRememberedUser();
   await getAndShowStoriesOnStart();
 
-  // if we got a logged-in user
+  // if there is a logged-in user
   if (currentUser) updateUIOnUserLogin();
 }
 
@@ -60,4 +60,4 @@ console.warn(
     " seeing those helpful debug messages. In your browser console, click on" +
     " menu 'Default Levels' and add Verbose"
 );
-$(start); // Once DOM is fully loaded, off to the races.
+$(start); 

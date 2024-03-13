@@ -86,7 +86,7 @@ class StoryList {
     return story;
   }
 
-  /* Delete the story from APi and remove from the list */
+  // Delete the story from APi and remove from the list 
   async removeStory(user, storyId) {
     const token = user.loginToken;
     await axios({
@@ -113,7 +113,7 @@ class User {
    *   - token
    */
 
-  constructor(
+  constructor( // Constructs a new User instance from provided user data and a token.
     { username, name, createdAt, favorites = [], ownStories = [] },
     token
   ) {
